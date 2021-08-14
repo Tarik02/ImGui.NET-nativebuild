@@ -2,4 +2,8 @@
 
 scriptPath="`dirname \"$0\"`"
 
-$scriptPath/build-native.sh release
+if [ ! -z "$OSX_TARGET_ARCHITECTURES" ]; then
+  $scriptPath/build-native.sh release -osx-architectures $OSX_TARGET_ARCHITECTURES
+else
+  $scriptPath/build-native.sh release
+fi
