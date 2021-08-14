@@ -9,7 +9,7 @@ matrix:
     osx_image: xcode9.4
     env:
     - OSX_TARGET_ARCHITECTURE: x86_64
-    - OSX_TARGET_NAME: cimgui.x64.dylib
+    - OSX_TARGET_NAME: cimgui.dylib
 language: cpp
 script:
 - "./ci-build.sh"
