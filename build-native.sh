@@ -19,7 +19,7 @@ while :; do
         release|-release)
             _CMakeBuildType=Release
             ;;
-        -osx-arch)
+        -osx-architectures)
             _CMakeOsxArchitectures=$2
             shift
             ;;
@@ -32,6 +32,6 @@ done
 
 mkdir -p $cimguiPath/build/$_CMakeBuildType
 pushd $cimguiPath/build/$_CMakeBuildType
-cmake ../.. -DCMAKE_OSX_ARCHITECTURES=$_CMakeOsxArchitectures -DCMAKE_BUILD_TYPE=$_CMakeBuildType
+cmake ../.. -DCMAKE_OSX_ARCHITECTURES=$_CMakeOsxArchitectures -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 -DCMAKE_BUILD_TYPE=$_CMakeBuildType
 make
 popd
