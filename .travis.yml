@@ -16,10 +16,11 @@ script:
 deploy:
   provider: releases
   api_key:
+    secure: "q20rB0JrA5X3KhZfkFcnf8m0keyhA12gDGJwrkd65gWbHx6mAZT75x9Rm65tHKGoQNaAqIafD/eQFsNR/wXwm3j5vZoRsv9HnHMz9lU9MfqshGawLA/KHsAcxKDSAZDQzbd1/xvb19h9LIANmpy8SbPResJvXNYn7VfP3aN2wlOQNJAzMNiU6hEo/mmyvwELpiwMmgZ1vZcSVBGh4SES7KCPQcDmKEwnL4nJkCVP5uHrRcGeEZLGLrfvINr7/LSiMarsVkJqrrdcf7QCRl4I+uGxdkYwR/r3P+XdVyG+rtM1Nwwb+TWakuK/XmieXxjNKOfQbLTgLLrXRqjxrhMzQTappAep2r6jy3/rolm0p7DzK/mJVflH4CEi4Ib1jKPxkgOzAzYIOxJgArJIfZ1H+AhQq9rHf46XCZ1TPryABB0VQP+la2q2UN6T5AhyVT+OgutVRPafb1nB2YZmCu8Yy+QQHBMB/VcaHjA3B4DOXOsz4amoweZTmEMteJZsRcjb+ZCM9PRfjsxQSIbyRFGyIq1oxGbOzQ2aFQL7cNEgQhjYVFyEVfUy9TCPinjTmNDXMo6M4GguUnUz8fpmuzwgSsW176+iTkk9XMqgHxpodSvdq/0F64I1sEVbOqdSYscbWCUmb84Y1YNHKtD5Ylbq10ybwxGo69TYtC7Q7AUO0Qg="
   file_glob: true
   file: cimgui/build/Release/*.dylib
   on:
     tags: true
-    repo: mellinoe/ImGui.NET-nativebuild
+    repo: Tarik02/ImGui.NET-nativebuild
 notifications:
   email: false
