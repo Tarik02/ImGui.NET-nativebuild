@@ -2,4 +2,9 @@
 
 scriptPath="`dirname \"$0\"`"
 
-$scriptPath/build-native.sh release
+if [ ! -z "$OSX_TARGET_ARCHITECTURE" ]; then
+  $scriptPath/build-native.sh release -osx-arch $OSX_TARGET_ARCHITECTURE
+  mv cimgui/build/Release/cimgui.dylib cimgui/build/Release/cimgui.$OSX_TARGET_ARCHITECTURE.dylib
+else
+  $scriptPath/build-native.sh release
+fi
