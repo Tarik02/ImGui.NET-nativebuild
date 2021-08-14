@@ -2,8 +2,8 @@
 
 scriptPath="`dirname \"$0\"`"
 
-if [ ! -z "$OSX_TARGET_ARCHITECTURES" ]; then
-  $scriptPath/build-native.sh release -osx-architectures $OSX_TARGET_ARCHITECTURES
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  $scriptPath/build-native.sh release -osx-architectures 'arm64;x86_64'
 else
   $scriptPath/build-native.sh release
 fi
